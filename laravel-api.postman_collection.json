@@ -1,0 +1,2063 @@
+{
+	"info": {
+		"_postman_id": "aa3e6b13-3d3d-4089-a4d9-e9d2deef9620",
+		"name": "laravel-api",
+		"description": "Documentação de API feita para o Teste da Magic Web Design.",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Filmes",
+			"item": [
+				{
+					"name": "Listar Filmes",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8000/api/movies",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"movies"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Listar Filmes",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8000/api/movies",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"movies"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 09 Jun 2020 18:39:42 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 09 Jun 2020 18:39:42 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/7.4.6"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": [\n        {\n            \"id\": 1,\n            \"title\": \"Random Title GV3kIOW1nD\",\n            \"genre\": \"Comédia\",\n            \"duration\": 10,\n            \"release_date\": \"1996-02-05\",\n            \"description\": \"Random Description vIIPTDTEvl\",\n            \"rating\": {\n                \"id\": 1,\n                \"name\": \"Livre\",\n                \"age\": null\n            },\n            \"crew\": [\n                {\n                    \"id\": 1,\n                    \"name\": \"Random Name UIOzagFnCD\",\n                    \"gender\": \"M\",\n                    \"details\": \"Random Details GLjfHII45Q\",\n                    \"character\": \"Random Name pOhZ4gGvWT\",\n                    \"role\": \"Actor\"\n                },\n                {\n                    \"id\": 4,\n                    \"name\": \"Random Name TUCLNxRPja\",\n                    \"gender\": \"F\",\n                    \"details\": \"Random Details DTKJWZXy7R\",\n                    \"role\": \"Director\"\n                }\n            ]\n        },\n        {\n            \"id\": 2,\n            \"title\": \"Random Title P8D6UIzO0z\",\n            \"genre\": \"Drama\",\n            \"duration\": 200,\n            \"release_date\": \"2020-10-06\",\n            \"description\": \"Random Description YXdMhR6YFQ\",\n            \"rating\": {\n                \"id\": 2,\n                \"name\": \"+18\",\n                \"age\": 18\n            },\n            \"crew\": [\n                {\n                    \"id\": 1,\n                    \"name\": \"Random Name UIOzagFnCD\",\n                    \"gender\": \"M\",\n                    \"details\": \"Random Details GLjfHII45Q\",\n                    \"role\": \"Director\"\n                },\n                {\n                    \"id\": 2,\n                    \"name\": \"Random Name 4wIWtam7fs\",\n                    \"gender\": \"F\",\n                    \"details\": \"Random Details gCZmQggTPy\",\n                    \"character\": \"Random Name 4f0fXreHoY\",\n                    \"role\": \"Actor\"\n                },\n                {\n                    \"id\": 3,\n                    \"name\": \"Random Name wYyPEDk2vG\",\n                    \"gender\": \"M\",\n                    \"details\": \"Random Details s7GJNY91wf\",\n                    \"character\": \"Random Name KfJXfCNOBk\",\n                    \"role\": \"Actor\"\n                }\n            ]\n        }\n    ],\n    \"links\": {\n        \"first\": \"http://localhost:8000/api/movies?page=1\",\n        \"last\": \"http://localhost:8000/api/movies?page=1\",\n        \"prev\": null,\n        \"next\": null\n    },\n    \"meta\": {\n        \"current_page\": 1,\n        \"from\": 1,\n        \"last_page\": 1,\n        \"path\": \"http://localhost:8000/api/movies\",\n        \"per_page\": 15,\n        \"to\": 2,\n        \"total\": 2\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Inserir Filme",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\": \"Teste\",\r\n    \"genre\": \"Drama\",\r\n    \"description\": \"Este é um filme teste\",\r\n    \"release_date\": \"1996-02-05\",\r\n    \"duration\": 90,\r\n    \"rating_id\": 1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/movies",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"movies"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Inserir Filme",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"title\": \"Teste\",\r\n    \"genre\": \"Drama\",\r\n    \"description\": \"Este é um filme teste\",\r\n    \"release_date\": \"1996-02-05\",\r\n    \"duration\": 90,\r\n    \"rating_id\": 1\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8000/api/movies",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"movies"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 09 Jun 2020 18:40:42 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 09 Jun 2020 18:40:42 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/7.4.6"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": {\n        \"id\": 3,\n        \"title\": \"Teste\",\n        \"genre\": \"Drama\",\n        \"duration\": 90,\n        \"release_date\": \"1996-02-05\",\n        \"description\": \"Este é um filme teste\",\n        \"rating\": {\n            \"id\": 1,\n            \"name\": \"Livre\",\n            \"age\": null\n        }\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Visualizar Filme ",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8000/api/movies/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"movies",
+								"1"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Visualizar Filme ",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "http://localhost:8000/api/movies/1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"movies",
+										"1"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 09 Jun 2020 18:40:58 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 09 Jun 2020 18:40:58 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/7.4.6"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "58"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": {\n        \"id\": 1,\n        \"title\": \"Random Title GV3kIOW1nD\",\n        \"genre\": \"Comédia\",\n        \"duration\": 10,\n        \"release_date\": \"1996-02-05\",\n        \"description\": \"Random Description vIIPTDTEvl\",\n        \"rating\": {\n            \"id\": 1,\n            \"name\": \"Livre\",\n            \"age\": null\n        },\n        \"crew\": [\n            {\n                \"id\": 1,\n                \"name\": \"Random Name UIOzagFnCD\",\n                \"gender\": \"M\",\n                \"details\": \"Random Details GLjfHII45Q\",\n                \"character\": \"Random Name pOhZ4gGvWT\",\n                \"role\": \"Actor\"\n            },\n            {\n                \"id\": 4,\n                \"name\": \"Random Name TUCLNxRPja\",\n                \"gender\": \"F\",\n                \"details\": \"Random Details DTKJWZXy7R\",\n                \"role\": \"Director\"\n            }\n        ]\n    }\n}"
+						},
+						{
+							"name": "Visualizar Filme ",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "http://localhost:8000/api/movies/1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"movies",
+										"1"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 08 Jun 2020 22:50:01 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 08 Jun 2020 22:50:01 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/7.4.6"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "58"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": {\n        \"id\": 1,\n        \"title\": \"ldgKdzsAa3\",\n        \"genre\": \"Comédia\",\n        \"duration\": 10,\n        \"release_date\": \"1997-07-16\",\n        \"description\": \"4Kr1xs2Omg\",\n        \"rating\": {\n            \"id\": 1,\n            \"name\": \"Livre\",\n            \"age\": null\n        }\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Deletar Filme",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8000/api/movies/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"movies",
+								"1"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Deletar Filme",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8000/api/movies/1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"movies",
+										"1"
+									]
+								}
+							},
+							"status": "No Content",
+							"code": 204,
+							"_postman_previewlanguage": "plain",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 08 Jun 2020 22:54:13 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 08 Jun 2020 22:54:13 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/7.4.6"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "58"
+								}
+							],
+							"cookie": [],
+							"body": null
+						}
+					]
+				},
+				{
+					"name": "Editar Filme",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\": \"Teste\",\r\n    \"duration\": 100,\r\n    \"release_date\": \"1996-02-05\",\r\n    \"description\": \"Filme Teste\",\r\n    \"rating_id\": 1,\r\n    \"genre\": \"Drama\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/movies/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"movies",
+								"2"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Editar Filme",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"title\": \"Teste\",\r\n    \"duration\": 100,\r\n    \"release_date\": \"1996-02-05\",\r\n    \"description\": \"Filme Teste\",\r\n    \"rating_id\": 1,\r\n    \"genre\": \"Drama\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8000/api/movies/2",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"movies",
+										"2"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 09 Jun 2020 18:41:46 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 09 Jun 2020 18:41:46 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/7.4.6"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": {\n        \"id\": 2,\n        \"title\": \"Teste\",\n        \"genre\": \"Drama\",\n        \"duration\": 100,\n        \"release_date\": \"1996-02-05\",\n        \"description\": \"Filme Teste\",\n        \"rating\": {\n            \"id\": 1,\n            \"name\": \"Livre\",\n            \"age\": null\n        }\n    }\n}"
+						}
+					]
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Classificação do Filme",
+			"item": [
+				{
+					"name": "Listar Classificações",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8000/api/ratings",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"ratings"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Listar Classificações",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8000/api/ratings",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"ratings"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 08 Jun 2020 23:02:36 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 08 Jun 2020 23:02:36 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/7.4.6"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "57"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": [\n        {\n            \"id\": 1,\n            \"name\": \"Livre\",\n            \"age\": null\n        },\n        {\n            \"id\": 2,\n            \"name\": \"+18\",\n            \"age\": 18\n        }\n    ],\n    \"links\": {\n        \"first\": \"http://localhost:8000/api/ratings?page=1\",\n        \"last\": \"http://localhost:8000/api/ratings?page=1\",\n        \"prev\": null,\n        \"next\": null\n    },\n    \"meta\": {\n        \"current_page\": 1,\n        \"from\": 1,\n        \"last_page\": 1,\n        \"path\": \"http://localhost:8000/api/ratings\",\n        \"per_page\": 15,\n        \"to\": 2,\n        \"total\": 2\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Inserir Classificação",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"+21\",\r\n    \"age\": 21\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/ratings",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"ratings"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Inserir Classificação",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"+21\",\r\n    \"age\": 21\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8000/api/ratings",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"ratings"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 08 Jun 2020 23:03:39 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 08 Jun 2020 23:03:39 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/7.4.6"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": {\n        \"id\": 3,\n        \"name\": \"+21\",\n        \"age\": 21\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Editar Classificação",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"R\",\r\n    \"age\": 17\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/ratings/3",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"ratings",
+								"3"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Editar Classificação",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"R\",\r\n    \"age\": 17\r\n}\r\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8000/api/ratings/3",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"ratings",
+										"3"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 08 Jun 2020 23:05:15 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 08 Jun 2020 23:05:15 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/7.4.6"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": {\n        \"id\": 3,\n        \"name\": \"R\",\n        \"age\": 17\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Deletar Classificação",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8000/api/ratings/3",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"ratings",
+								"3"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Deletar Classificação",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8000/api/ratings/3",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"ratings",
+										"3"
+									]
+								}
+							},
+							"status": "No Content",
+							"code": 204,
+							"_postman_previewlanguage": "plain",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 08 Jun 2020 23:06:44 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 08 Jun 2020 23:06:44 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/7.4.6"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "58"
+								}
+							],
+							"cookie": [],
+							"body": null
+						}
+					]
+				},
+				{
+					"name": "Visualizar Classificação",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8000/api/ratings/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"ratings",
+								"1"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Visualizar Classificação",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8000/api/ratings/1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"ratings",
+										"1"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 08 Jun 2020 23:06:57 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 08 Jun 2020 23:06:57 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/7.4.6"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "57"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": {\n        \"id\": 1,\n        \"name\": \"Livre\",\n        \"age\": null\n    }\n}"
+						}
+					]
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Atores",
+			"item": [
+				{
+					"name": "Listar Atores",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8000/api/actors",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"actors"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Listar Atores",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "http://localhost:8000/api/actors",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"actors"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 09 Jun 2020 18:44:24 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 09 Jun 2020 18:44:24 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/7.4.6"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": [\n        {\n            \"id\": 1,\n            \"name\": \"Random Name XoIlbNu9bF\",\n            \"gender\": \"M\",\n            \"details\": \"Random Details 7ZhY9qNqaJ\",\n            \"movies\": [\n                \"Random Title GNOc9Hm0tc\"\n            ]\n        },\n        {\n            \"id\": 2,\n            \"name\": \"Random Name 5a8uFCI6FC\",\n            \"gender\": \"F\",\n            \"details\": \"Random Details LKMjRzBtKu\",\n            \"movies\": [\n                \"Random Title YdudJYeopv\"\n            ]\n        },\n        {\n            \"id\": 3,\n            \"name\": \"Random Name 8iZ64CB9QB\",\n            \"gender\": \"M\",\n            \"details\": \"Random Details Gu3nCxAaB9\",\n            \"movies\": [\n                \"Random Title YdudJYeopv\"\n            ]\n        }\n    ],\n    \"links\": {\n        \"first\": \"http://localhost:8000/api/actors?page=1\",\n        \"last\": \"http://localhost:8000/api/actors?page=1\",\n        \"prev\": null,\n        \"next\": null\n    },\n    \"meta\": {\n        \"current_page\": 1,\n        \"from\": 1,\n        \"last_page\": 1,\n        \"path\": \"http://localhost:8000/api/actors\",\n        \"per_page\": 15,\n        \"to\": 3,\n        \"total\": 3\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Inserir Ator",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Marcel\",\r\n    \"gender\": \"M\",\r\n    \"details\": \"Details about the person\",\r\n    \"movie_ids\": [\r\n        1,\r\n        2\r\n    ],\r\n    \"movie_characters\": [\r\n        \"Personagem1\",\r\n        \"Personagem2\"\r\n    ]\r\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/actors",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"actors"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Inserir Ator",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"Marcel\",\r\n    \"gender\": \"M\",\r\n    \"details\": \"Details about the person\",\r\n    \"movie_ids\": [\r\n        1,\r\n        2\r\n    ],\r\n    \"movie_characters\": [\r\n        \"Personagem1\",\r\n        \"Personagem2\"\r\n    ]\r\n}"
+								},
+								"url": {
+									"raw": "http://localhost:8000/api/actors",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"actors"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 09 Jun 2020 18:45:07 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 09 Jun 2020 18:45:07 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/7.4.6"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "58"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": {\n        \"id\": 5,\n        \"name\": \"Marcel\",\n        \"gender\": \"M\",\n        \"details\": \"Details about the person\",\n        \"movies\": [\n            {\n                \"id\": 1,\n                \"title\": \"Random Title GNOc9Hm0tc\",\n                \"genre\": \"Comédia\",\n                \"duration\": 10,\n                \"release_date\": \"1996-02-05\",\n                \"description\": \"Random Description RBNrbWeeyd\",\n                \"rating_id\": 1,\n                \"character\": \"Personagem1\"\n            },\n            {\n                \"id\": 2,\n                \"title\": \"Random Title YdudJYeopv\",\n                \"genre\": \"Drama\",\n                \"duration\": 200,\n                \"release_date\": \"2020-10-06\",\n                \"description\": \"Random Description PPSpvumRWq\",\n                \"rating_id\": 2,\n                \"character\": \"Personagem2\"\n            }\n        ]\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Editar Ator",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Accept",
+								"type": "text",
+								"value": "application/json"
+							},
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Marcel\",\r\n    \"gender\": \"M\",\r\n    \"details\": \"Teste\",\r\n    \"movie_ids\": [\r\n        1,\r\n        2\r\n    ],\r\n    \"movie_characters\": [\r\n        \"Personagem100\",\r\n        \"Personagem200\"\r\n    ]\r\n}",
+							"options": {
+								"raw": {}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/actors/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"actors",
+								"1"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Editar Ator",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Accept",
+										"type": "text",
+										"value": "application/json"
+									},
+									{
+										"key": "Content-Type",
+										"type": "text",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"Marcel\",\r\n    \"gender\": \"M\",\r\n    \"details\": \"Teste\",\r\n    \"movie_ids\": [\r\n        1,\r\n        2\r\n    ],\r\n    \"movie_characters\": [\r\n        \"Personagem100\",\r\n        \"Personagem200\"\r\n    ]\r\n}",
+									"options": {
+										"raw": {}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8000/api/actors/1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"actors",
+										"1"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 09 Jun 2020 18:45:55 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 09 Jun 2020 18:45:55 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/7.4.6"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": {\n        \"id\": 1,\n        \"name\": \"Marcel\",\n        \"gender\": \"M\",\n        \"details\": \"Teste\",\n        \"movies\": [\n            {\n                \"id\": 1,\n                \"title\": \"Random Title GNOc9Hm0tc\",\n                \"genre\": \"Comédia\",\n                \"duration\": 10,\n                \"release_date\": \"1996-02-05\",\n                \"description\": \"Random Description RBNrbWeeyd\",\n                \"rating_id\": 1,\n                \"character\": \"Personagem100\"\n            },\n            {\n                \"id\": 2,\n                \"title\": \"Random Title YdudJYeopv\",\n                \"genre\": \"Drama\",\n                \"duration\": 200,\n                \"release_date\": \"2020-10-06\",\n                \"description\": \"Random Description PPSpvumRWq\",\n                \"rating_id\": 2,\n                \"character\": \"Personagem200\"\n            }\n        ]\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Visualizar Ator",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8000/api/actors/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"actors",
+								"1"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Visualizar Ator",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8000/api/actors/1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"actors",
+										"1"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 09 Jun 2020 18:46:18 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 09 Jun 2020 18:46:18 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/7.4.6"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "58"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": {\n        \"id\": 1,\n        \"name\": \"Marcel\",\n        \"gender\": \"M\",\n        \"details\": \"Teste\",\n        \"movies\": [\n            \"Random Title GNOc9Hm0tc\",\n            \"Random Title YdudJYeopv\"\n        ]\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Deletar Ator",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8000/api/actors/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"actors",
+								"1"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Deletar Ator",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8000/api/actors/1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"actors",
+										"1"
+									]
+								}
+							},
+							"status": "No Content",
+							"code": 204,
+							"_postman_previewlanguage": "plain",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 09 Jun 2020 18:49:46 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 09 Jun 2020 18:49:46 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/7.4.6"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "56"
+								}
+							],
+							"cookie": [],
+							"body": null
+						}
+					]
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Diretores",
+			"item": [
+				{
+					"name": "Listar Diretores",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8000/api/directors",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"directors"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Listar Diretores",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "http://localhost:8000/api/directors",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"directors"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 09 Jun 2020 18:50:47 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 09 Jun 2020 18:50:47 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/7.4.6"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "56"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": [\n        {\n            \"id\": 1,\n            \"name\": \"Marcel\",\n            \"gender\": \"M\",\n            \"details\": \"Teste\",\n            \"movies\": [\n                \"Random Title YdudJYeopv\"\n            ]\n        },\n        {\n            \"id\": 4,\n            \"name\": \"Random Name zj79eYB6xe\",\n            \"gender\": \"F\",\n            \"details\": \"Random Details ukt9JViHtr\",\n            \"movies\": [\n                \"Random Title GNOc9Hm0tc\"\n            ]\n        }\n    ],\n    \"links\": {\n        \"first\": \"http://localhost:8000/api/directors?page=1\",\n        \"last\": \"http://localhost:8000/api/directors?page=1\",\n        \"prev\": null,\n        \"next\": null\n    },\n    \"meta\": {\n        \"current_page\": 1,\n        \"from\": 1,\n        \"last_page\": 1,\n        \"path\": \"http://localhost:8000/api/directors\",\n        \"per_page\": 15,\n        \"to\": 2,\n        \"total\": 2\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Inserir Diretor",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"type": "text",
+								"value": "application/json"
+							},
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Marcel\",\r\n    \"gender\": \"M\",\r\n    \"movie_ids\": [\r\n        1,\r\n        2\r\n    ]\r\n}",
+							"options": {
+								"raw": {}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/directors",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"directors"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Inserir Diretor",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"type": "text",
+										"value": "application/json"
+									},
+									{
+										"key": "Content-Type",
+										"type": "text",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"Marcel\",\r\n    \"gender\": \"M\",\r\n    \"movie_ids\": [\r\n        1,\r\n        2\r\n    ]\r\n}",
+									"options": {
+										"raw": {}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8000/api/directors",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"directors"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 09 Jun 2020 18:52:23 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 09 Jun 2020 18:52:23 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/7.4.6"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": {\n        \"id\": 6,\n        \"name\": \"Marcel\",\n        \"gender\": \"M\",\n        \"movies\": [\n            {\n                \"id\": 1,\n                \"title\": \"Random Title GNOc9Hm0tc\",\n                \"genre\": \"Comédia\",\n                \"duration\": 10,\n                \"release_date\": \"1996-02-05\",\n                \"description\": \"Random Description RBNrbWeeyd\",\n                \"rating_id\": 1,\n                \"character\": null\n            },\n            {\n                \"id\": 2,\n                \"title\": \"Random Title YdudJYeopv\",\n                \"genre\": \"Drama\",\n                \"duration\": 200,\n                \"release_date\": \"2020-10-06\",\n                \"description\": \"Random Description PPSpvumRWq\",\n                \"rating_id\": 2,\n                \"character\": null\n            }\n        ]\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Editar Diretor",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Accept",
+								"type": "text",
+								"value": "application/json"
+							},
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Marcel Edit\",\r\n    \"gender\": \"M\",\r\n    \"details\": \"Teste Edit\",\r\n    \"movie_ids\": [\r\n        1\r\n    ]\r\n}",
+							"options": {
+								"raw": {}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/directors/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"directors",
+								"1"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Editar Diretor",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Accept",
+										"type": "text",
+										"value": "application/json"
+									},
+									{
+										"key": "Content-Type",
+										"type": "text",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"Marcel Edit\",\r\n    \"gender\": \"M\",\r\n    \"details\": \"Teste Edit\",\r\n    \"movie_ids\": [\r\n        1\r\n    ]\r\n}"
+								},
+								"url": {
+									"raw": "http://localhost:8000/api/directors/1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"directors",
+										"1"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 09 Jun 2020 18:53:48 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 09 Jun 2020 18:53:48 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/7.4.6"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "56"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": {\n        \"id\": 1,\n        \"name\": \"Marcel Edit\",\n        \"gender\": \"M\",\n        \"details\": \"Teste Edit\",\n        \"movies\": [\n            {\n                \"id\": 1,\n                \"title\": \"Random Title GNOc9Hm0tc\",\n                \"genre\": \"Comédia\",\n                \"duration\": 10,\n                \"release_date\": \"1996-02-05\",\n                \"description\": \"Random Description RBNrbWeeyd\",\n                \"rating_id\": 1,\n                \"character\": null\n            }\n        ]\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Visualizar Diretor",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8000/api/directors/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"directors",
+								"1"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Visualizar Diretor",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8000/api/directors/1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"directors",
+										"1"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 09 Jun 2020 18:54:20 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 09 Jun 2020 18:54:20 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/7.4.6"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "55"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": {\n        \"id\": 1,\n        \"name\": \"Marcel Edit\",\n        \"gender\": \"M\",\n        \"details\": \"Teste Edit\",\n        \"movies\": [\n            \"Random Title GNOc9Hm0tc\"\n        ]\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Deletar Diretor",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8000/api/directors/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"directors",
+								"1"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Deletar Diretor",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8000/api/directors/1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"directors",
+										"1"
+									]
+								}
+							},
+							"status": "No Content",
+							"code": 204,
+							"_postman_previewlanguage": "plain",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 09 Jun 2020 18:54:38 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 09 Jun 2020 18:54:38 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/7.4.6"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59"
+								}
+							],
+							"cookie": [],
+							"body": null
+						}
+					]
+				}
+			],
+			"protocolProfileBehavior": {}
+		}
+	],
+	"protocolProfileBehavior": {}
+}
