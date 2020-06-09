@@ -23,10 +23,10 @@ Descrição: Contém as informações de todas as Pessoas mostradas na API
 Tabela: Roles  
 Descrição: Contém os possíveis cargos das Pessoas cadastradas, neste caso Atores (Actors) e Diretores (Directors)
 
-Tabela: PersonRoles
+Tabela: PersonRoles  
 Descrição: Faz o relacionamento entre as pessoas cadastradas e seu respectivo cargo
 
-Tabela: MoviePeople
+Tabela: MoviePeople  
 Descrição: Faz o relacionamento entre os Filmes, as Pessoas cadastradas e o cargo ocupado no filme
 
 ### Como iniciar a API:  
