@@ -29,20 +29,21 @@ Descrição: Faz o relacionamento entre as pessoas cadastradas e seu respectivo 
 Tabela: MoviePeople  
 Descrição: Faz o relacionamento entre os Filmes, as Pessoas cadastradas e o cargo ocupado no filme
 
-### Como iniciar a API:  
+### Como iniciar a API:    
 
-1. **Colocar os dados do banco de dados no arquivo .env, conforme abaixo:**  
+1. **Instale o PHP e Composer, abra o terminal na pasta do projeto e execute os seguintes comandos:**  
+    >composer install  
+
+2. **Colocar os dados do banco de dados no arquivo .env.example e alterar o nome para .env, conforme abaixo:**  
     DB_CONNECTION=mysql  
     DB_HOST=IP.DO.SERVIDOR           
     DB_PORT=PORTA.DO.SERVIDOR  
     DB_DATABASE=NOME.DO.BANCO   
     DB_USERNAME=USUARIO.DO.BANCO          
-    DB_PASSWORD=SENHA.DO.BANCO      
+    DB_PASSWORD=SENHA.DO.BANCO  
 
-2. **Instale o PHP e Composer, abra o terminal na pasta do projeto e execute os seguintes comandos:**  
-    >composer install  
-
-    >php artisan migrate:refresh --seeds  (Obs: Usando o migrate:refresh todos os dados existentes do banco serão apagados) 
+3. **Alimente o banco de dados, execute:**  
+    >php artisan migrate:refresh --seed  (Obs: Usando o migrate:refresh todos os dados existentes do banco serão apagados) 
 
 3. **Para criar dados aleatórios e iniciar um servidor de teste execute:**  
     >php artisan db:seed --class=TestSeeder  
